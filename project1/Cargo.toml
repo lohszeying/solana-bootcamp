@@ -1,0 +1,7 @@
+[package]
+name = "Solana"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anchor-lang = "0.31.0"
