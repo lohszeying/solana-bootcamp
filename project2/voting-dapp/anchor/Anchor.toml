@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-votingdapp = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
+voting = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
 
 [registry]
 url = "https://api.apr.dev"
@@ -17,6 +17,7 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "../node_modules/.bin/jest --preset ts-jest"
+#test = "npx jest --preset ts-jest"
 
 [test]
 startup_wait = 5000
