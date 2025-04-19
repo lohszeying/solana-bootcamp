@@ -8,23 +8,24 @@ import {beforeAll} from "@jest/globals";
 
 const IDL = require('../target/idl/voting.json');
 
-const votingAddress = new PublicKey("coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF");
+const votingAddress = new PublicKey("D2J9fyQmwF3j1ipuKWrkNCuSKtEkY66vmmpCUQcry5Zy");
 
 describe('Voting', () => {
     let context;
     let provider;
-    let votingProgram: anchor.Program<Voting>;
+    anchor.setProvider(anchor.AnchorProvider.env());
+    let votingProgram = anchor.workspace.Voting as Program<Voting>;
 
     beforeAll(async () => {
-        context = await startAnchor("", [
-            {name: "voting", programId: votingAddress}
-        ], []);
-        provider = new BankrunProvider(context);
-
-        votingProgram = new Program<Voting>(
-            IDL,
-            provider);
-    }, 30000);
+        // context = await startAnchor("", [
+        //     {name: "voting", programId: votingAddress}
+        // ], []);
+        // provider = new BankrunProvider(context);
+        //
+        // votingProgram = new Program<Voting>(
+        //     IDL,
+        //     provider);
+    });
 
     it('Initialize Poll', async () => {
         // const context = await startAnchor("", [
