@@ -8,7 +8,7 @@ import {beforeAll} from "@jest/globals";
 
 const IDL = require('../target/idl/voting.json');
 
-const votingAddress = new PublicKey("D2J9fyQmwF3j1ipuKWrkNCuSKtEkY66vmmpCUQcry5Zy");
+const votingAddress = new PublicKey("BGhRJ1rk5z5pL2JaJLEVibz1tD5ZqZtKWFMQNVSCq9Z2");
 
 describe('Voting', () => {
     let context;
@@ -100,4 +100,9 @@ describe('Voting', () => {
         console.log(smoothCandidate);
         expect(smoothCandidate.candidateVotes.toNumber()).toEqual(1);
     });
+
+
+    it("test case to check whether is candidate voted correctly!", async () => {
+        console.log(await votingProgram.account.candidate.all())
+    })
 })

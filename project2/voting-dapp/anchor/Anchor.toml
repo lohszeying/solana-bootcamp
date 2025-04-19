@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-voting = "D2J9fyQmwF3j1ipuKWrkNCuSKtEkY66vmmpCUQcry5Zy"
+voting = "BGhRJ1rk5z5pL2JaJLEVibz1tD5ZqZtKWFMQNVSCq9Z2"
 
 [registry]
 url = "https://api.apr.dev"
@@ -16,8 +16,8 @@ cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "../node_modules/.bin/jest --preset ts-jest"
-#test = "npx jest --preset ts-jest"
+#test = "../node_modules/.bin/jest --preset ts-jest"
+test = "npx jest --preset ts-jest"
 
 [test]
 startup_wait = 5000

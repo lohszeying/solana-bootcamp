@@ -34,11 +34,10 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const url = new URL(request.url);
-  const candidate = url.searchParams.get('candidate');
+  const candidate = url.searchParams.get("candidate");
 
-  if (candidate !== 'Crunchy' && candidate !== 'Smooth') {
-    console.log("is it here")
-    return new Response('Invalid candidate', { status: 400, headers: ACTIONS_CORS_HEADERS });
+  if (candidate != "Crunchy" && candidate != "Smooth") {
+    return new Response("Invalid candidate", { status: 400, headers: ACTIONS_CORS_HEADERS });
   }
 
   const connection = new Connection("http://127.0.0.1:8899", "confirmed");
@@ -51,8 +50,7 @@ export async function POST(request: Request) {
     // make sure the voter is public key and give back an error that makes sense
     voter = new PublicKey(body.account);
   } catch (error) {
-    console.log("Is the error here")
-    return new Response(' Invalid account', {status: 400, headers: ACTIONS_CORS_HEADERS});
+    return new Response("Invalid account", { status: 400, headers: ACTIONS_CORS_HEADERS });
   }
 
   const instruction = await program.methods.vote(candidate, new BN(1))
