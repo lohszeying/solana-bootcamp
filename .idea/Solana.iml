@@ -6,10 +6,13 @@
       <sourceFolder url="file://$MODULE_DIR$/project2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/project2/voting-dapp/anchor/programs/votingdapp/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/project4/crud-app/anchor/programs/crudapp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/project7/swap/programs/swap/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/project1/target" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/project2/target" />
       <excludeFolder url="file://$MODULE_DIR$/project2/voting-dapp/anchor/target" />
+      <excludeFolder url="file://$MODULE_DIR$/project4/crud-app/anchor/target" />
+      <excludeFolder url="file://$MODULE_DIR$/project7/swap/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
